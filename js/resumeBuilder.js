@@ -6,6 +6,15 @@
 
 //$("#main").append(funThoughts);
 
+
+//uncomment below for log-clicks.
+$(document).click(function(loc) {
+  	var x = loc.pageX;
+  	var y = loc.pageY;
+
+  	logClicks(x,y);
+});
+
 var name = "Michele Franzese"
 var role = "Web Developer"
 
@@ -156,20 +165,14 @@ var projects = {
 	]
 }
 
-projects.display = function (){
 
-	for(project in projects.projects){
-		$("#projects").append(HTMLprojectStart);
-
-		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-		$(".project-entry:last").append(formattedProjectTitle);
-		var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-		$(".project-entry:last").append(formattedProjectDates);
-		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-		$(".project-entry:last").append(formattedProjectDescription);
-		var formattedProjectImage = HTMlprojectImage.replace("%data%", projects.projects[project].images);
-		$(".project-entry:last").append(formattedProjectImage);
-	}
+function inName(name) {
+	name = name.trim().split(" ");
+	console.log(name);
+	name[1]= name[1].toUpperCase();
+	name[0]= name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+	
+	return name[0] +" "+name[1];
 }
 
-projects.display();
+$('#main').append(internationalizeButton);
