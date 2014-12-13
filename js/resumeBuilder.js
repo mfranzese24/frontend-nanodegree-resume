@@ -160,10 +160,46 @@ var projects = {
 		"title": "Project Title",
 		"dates": "Project dates",
 		"description": "Project Description",
-		"images": "images/michele.jpg/200/200",
+		"images": "images/michele.jpg",
+	},
+	{
+		"title": "Project Title",
+		"dates": "Project dates",
+		"description": "Project Description",
+		"images": "images/michele.jpg",
 	}
 	]
+};
+
+projects.display = function () {
+	for(project in projects.projects) {
+		$("#projects").append(HTMLprojectStart);
+	}
+		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		$(".project-entry:last").append(formattedProjectTitle);
+		var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+		$(".project-entry:last").append(formattedProjectDates);
+		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+		$(".project-entry:last").append(formattedProjectDescription);
+		var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
+		$(".project-entry:last").append(formattedProjectImage);
+
+
 }
+
+for(project in projects.projects) {
+		$("#projects").append(HTMLprojectStart);
+	}
+		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+		$(".project-entry:last").append(formattedProjectTitle);
+		var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+		$(".project-entry:last").append(formattedProjectDates);
+		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+		$(".project-entry:last").append(formattedProjectDescription);
+		var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
+		$(".project-entry:last").append(formattedProjectImage);
+
+projects.display();
 
 
 function inName(name) {
