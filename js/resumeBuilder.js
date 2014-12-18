@@ -157,17 +157,11 @@ var projects = {
 
 	"projects": [
 	{
-		"title": "Project Title",
-		"dates": "Project dates",
+		"title": "Orange Udacity Mug",
+		"dates": "November 2014",
 		"description": "Project Description",
-		"images": "images/michele.jpg",
+		"images": "images/mug.png",
 	},
-	{
-		"title": "Project Title",
-		"dates": "Project dates",
-		"description": "Project Description",
-		"images": "images/michele.jpg",
-	}
 	]
 };
 
@@ -183,23 +177,9 @@ projects.display = function () {
 		$(".project-entry:last").append(formattedProjectDescription);
 		var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
 		$(".project-entry:last").append(formattedProjectImage);
-
-
 }
+ projects.display();
 
-for(project in projects.projects) {
-		$("#projects").append(HTMLprojectStart);
-	}
-		var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
-		$(".project-entry:last").append(formattedProjectTitle);
-		var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
-		$(".project-entry:last").append(formattedProjectDates);
-		var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
-		$(".project-entry:last").append(formattedProjectDescription);
-		var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
-		$(".project-entry:last").append(formattedProjectImage);
-
-projects.display();
 
 
 function inName(name) {
@@ -212,3 +192,7 @@ function inName(name) {
 }
 
 $('#main').append(internationalizeButton);
+
+//map
+
+$("#mapDiv").append(googleMap);
