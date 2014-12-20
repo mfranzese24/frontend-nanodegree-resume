@@ -131,6 +131,14 @@ var education = {
 		"dates" : "1998 - 2002",
 		"url" : "http://www.liu.edu/post"
 	}
+	],
+	"onlineCourses": [
+	{
+		"title": "Front-End Web Developer Nanodegree",
+		"school": "Udacity",
+		"dates": "2014 - 2015",
+		"url": "https://www.udacity.com/course/nd001",
+	}
 	]
 };
 
@@ -148,6 +156,19 @@ function displaySchool(){
 	$(".education-entry:last").append(formattedMajor);
 	var formattedSchoolDate = HTMLschoolDates.replace("%data%",education.schools[school].dates);
 	$(".education-entry:last").append(formattedSchoolDate);
+	}
+	
+	for (onlineCourses in education.onlineCourses){
+	$(".education-entry:last").append(HTMLonlineClasses);
+
+	var formattedClass = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourses].title);
+	$(".education-entry:last").append(formattedClass);
+	var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourses].school);
+	$(".education-entry:last").append(formattedOnlineSchool);
+	var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[onlineCourses].dates);
+	$(".education-entry:last").append(formattedOnlineDates);
+	var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourses].url);
+	$(".education-entry:last").append(formattedOnlineURL);
 	}
 }
 
