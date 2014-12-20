@@ -1,0 +1,5 @@
+http://www.w3schools.com/googleAPI/google_maps_events.asp
+
+https://developers.google.com/maps/documentation/javascript/reference#InfoWindowOptions
+
+https://developers.google.com/speed/libraries/devguide#jquery
