@@ -34,7 +34,7 @@ var bio = {
 		"twitter" : "@longislandcolor",
 		"location" : "Port Jefferson Station, NY"
 	},
-	"welcomeMessage" : "Welcome to my Resume",
+	"welcomeMessage" : "A self-motivated and highly driven individual, my background in the arts and design is coming together with my technological background to push me toward a career change.  I am looking to combine my newfound training in Front-End Web Development with my design sensibility as I move forward in a career as a Web Developer.",
 	"skills" : ["direct sales", "leadership", "operations", "web development"],
 	"image" : "images/michele.jpg"
 };
