@@ -36,8 +36,9 @@ var bio = {
 	},
 	"welcomeMessage" : "A self-motivated and highly driven individual, my background in the arts and design is coming together with my technological background to push me toward a career change.  I am looking to combine my newfound training in Front-End Web Development with my design sensibility as I move forward in a career as a Web Developer.",
 	"skills" : ["direct sales", "leadership", "operations", "web development"],
-	"image" : "images/michele.jpg"
-};
+	"image" : "images/michele.jpg",
+
+	displayBio: function() {
 
 var formattedMobile = HTMLmobile.replace("%data%",bio.contact.mobile);
 $("#topContacts").append(formattedMobile);
@@ -79,6 +80,11 @@ formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
 $("#skills").append(formattedSkill);
 formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
 $("#skills").append(formattedSkill);
+	}
+};
+
+bio.displayBio();
+
 
 var work = {
 	"jobs": [
