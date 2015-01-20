@@ -196,10 +196,9 @@ var projects = {
 		"description": "Project Description",
 		"images": "images/mug.png",
 	},
-	]
-};
-
-projects.display = function () {
+	],
+	
+	display : function () {
 	for(project in projects.projects) {
 		$("#projects").append(HTMLprojectStart);
 	}
@@ -211,7 +210,11 @@ projects.display = function () {
 		$(".project-entry:last").append(formattedProjectDescription);
 		var formattedProjectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images);
 		$(".project-entry:last").append(formattedProjectImage);
+	}
+	
 }
+
+
  projects.display();
 
 
