@@ -111,11 +111,9 @@ var work = {
 		"description": "Assisting with coaching and developing employees, running an efficient business including maintaining inventory levels, store appearance and daily paperwork as well as ensuring efficient and courteous handling of customer requests including sales and service resolutions were my responsibilities as an Assistant with AT&T. As an Assistant, I was given the additional responsibility to serve as Acting Manager as I developed toward the next level."
 	}
 
-	]
-};
+	],
 
-function displayWork(){
-for (job in work.jobs){
+	displayWork: function() {for (job in work.jobs){
 	
 	$("#workExperience").append(HTMLworkStart);
  
@@ -130,7 +128,9 @@ $(".work-entry:last").append(formattedWorkComplete);
 
 }
 }
-displayWork();
+};
+
+work.displayWork();
 
 
 
@@ -152,11 +152,10 @@ var education = {
 		"dates": "2014 - 2015",
 		"url": "https://www.udacity.com/course/nd001",
 	}
-	]
-};
+	],
 
-function displaySchool(){
-	for(school in education.schools){
+	displaySchool : function () {
+		for(school in education.schools){
 		$("#education").append(HTMLschoolStart);
 
 	var formattedSchool = HTMLschoolName.replace("%data%",education.schools[school].name);
@@ -183,9 +182,10 @@ function displaySchool(){
 	var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourses].url);
 	$(".education-entry:last").append(formattedOnlineURL);
 	}
-}
+	}
+};
 
-displaySchool();
+education.displaySchool();
 
 var projects = {
 
@@ -214,8 +214,7 @@ var projects = {
 	
 }
 
-
- projects.display();
+projects.display();
 
 
 
